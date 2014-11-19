@@ -68,7 +68,7 @@
     require([
       <% scripts.src.forEach(function(script, i){ %>
         <% script = script.replace(/\\/g, '/') // replace all backward slashes to forward slash %>
-        '<%= script.replace("scripts/", "app/") %>' <%= i < scripts.src.length-1 ? ',' : '' %>
+        'app/<%= script.replace("scripts/", "") %>' <%= i < scripts.src.length-1 ? ',' : '' %>
       <% }) %>
     ],
     function(){
